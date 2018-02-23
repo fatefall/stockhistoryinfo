@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>股票列表</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <td>股票代码</td>
+            <td>股票名字</td>
+        </thead>
+        <tbody>
+            {% for i in stocklist  %}
+                <tr>
+                    <td><a href="../eps/?stockid={{ i.stockid }}" target="_blank">{{ i.stockid }}</a></td>
+                    <td>{{ i.stockname }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
